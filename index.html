@@ -25,20 +25,32 @@
       }
     }
 
-    .b-example-divider {
-      height: 3rem;
-      background-color: rgba(0, 0, 0, .1);
-      border: solid rgba(0, 0, 0, .15);
-      border-width: 1px 0;
-      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-    }
+    .btn-outline-secondary {
+    color: gray;
+    background-color: #fff;
+    border-color:gray; /*set the color you want here*/
+    border: 1px solid;
+    outline-color: #0000 !important;
+}
+.btn-outline-secondary:hover, .btn-outline-secondary:focus, .btn-outline-secondary:active, .btn-outline-secondary.active, .open>.dropdown-toggle.btn-outline-secondary {
+  color: black;
+    background-color: #fff;
+    border-color: #0000; /*set the color you want here*/
+    border: 1px solid;
+    outline-color: #0000 !important;
+}
 
-    .b-example-vr {
-      flex-shrink: 0;
-      width: 1.5rem;
-      height: 100vh;
-    }
-
+.btn-dark {
+    color: white;
+    outline-color: #0000 !important;
+}
+.btn-dark:hover, .btn-dark:focus, .btn-dark:active, .btn-dark.active, .open>.dropdown-toggle.btn-dark {
+  color: black;
+    background-color: #fff;
+    border-color: #0000; /*set the color you want here*/
+    border: 1px solid;
+    outline-color: #0000 !important;
+}
     .bi {
       vertical-align: -.125em;
       fill: currentColor;
@@ -62,61 +74,84 @@
       -webkit-overflow-scrolling: touch;
     }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    li.open > a > span{
+   border-top: 0px !important;
+   border-bottom: 4px dashed !important;
+}
 
+  </style>
    <link href="css/headers.css" rel="stylesheet">
 </head>
 <body>
   
 
-  <div class="container">
-    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-center py-3 mb-2 border-bottom">
-      <a href="/" class="align-self-center d-flex p-2 col-md-2 mb-2 mb-md-0 text-dark text-decoration-none">
+  
+    <header class="container-xxl bd-gutter pt-md-1 pb-md-2 d-flex gap-5 flex-wrap align-items-center justify-content-center justify-content-md-center p-5 py-2 mb-1">
+      <a href="/" class=" d-flex p-2 col-sm-1 mb-2 mb-sm-0 text-dark text-decoration-none ">
         <img class="bi me-2"  role="img" aria-label="logo" src="images/logo.svg"></img>
       </a>
 
-      <ul class="nav align-self-center col-12 col-md-auto mb-2 justify-content-start mb-md-0 p-2">
-        <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">Company</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">Careers</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
+      <ul class="nav  align-self-center col-12 col-md-auto mb-2 justify-content-center p-2">
+        
+        <li><a href id="navbardrop" class=" nav-link px-2 link-secondary d-flex align-items-center col-lg-4 mb-2 mb-lg-0 text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" >
+          Features</a>
+          <ul class="dropdown-menu text-small shadow">
+           <li><a class="dropdown-item d-flex gap-2 align-items-center" href="#"><img class="bi" width="16" height="16" src="images/icon-todo.svg"></img>Todo list</a></li>
+           <li><a class="dropdown-item d-flex gap-2 align-items-center" href="#"><img class="bi" width="16" height="16" src="images/icon-calendar.svg"></img>Calendar</a></li>
+           <li><a class="dropdown-item d-flex gap-2 align-items-center" href="#"><img class="bi" width="16" height="16" src="images/icon-reminders.svg"></img>Remainders</a></li>
+           <li><a class="dropdown-item d-flex gap-2 align-items-center" href="#"><img class="bi" width="16" height="16" src="images/icon-planning.svg"></img>Planning</a></li>
+           
+          </ul></li>
+          <li><a class=" nav-link px-2 link-secondary d-flex align-items-center col-lg-4 mb-2 mb-lg-0 text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" href="#">Company</a>
+            <ul class="dropdown-menu text-small shadow">
+              
+              <li><a class="dropdown-item" href="#">History</a></li>
+              <li><a class="dropdown-item" href="#">Our Team</a></li>
+              <li><a class="dropdown-item" href="#">Blog</a></li>
+           
+            </ul></li>
+        <li><a href="#" class="nav-link px-2 link-secondary">Careers</a></li>
+        <li><a href="#" class="nav-link px-2 link-secondary">About</a></li>
       </ul>
 
-      <div class="col-md-3 text-end justify-content-end ms-auto p-2">
-        <button type="button" class="btn text-secondary me-2">Login</button>
-        <button type="button" class="btn btn-outline-secondary">Sign-up</button>
+      <div class="col-md-3 text-end align-self-center col-md-auto justify-content-center ms-auto p-2">
+        <button type="button" class="btn link-secondary me-2">Login</button>
+        <button type="button" class="btn btn-outline-secondary">Register</button>
       </div>
     </header>
   </div>
 
-  <div class="container col-xxl-8 px-4 py-5">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+  <div class="container col-xxl-8 px-4 ">
+    <div class="row flex-lg-row-reverse g-5 py-5">
       <div class="col-10 col-sm-8 col-lg-6">
-        <img src="images/image-hero-desktop.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        <img src="images/image-hero-desktop.png" style="height: 550px" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy">
       </div>
-      <div class="col-lg-6">
+      <div class="col-10 col-sm-8 col-lg-6 d-flex align-items-end flex-column">
+        <div class="p-2">
         <h1 style="font-size: 4.5rem" class="display-5 fw-bold lh-1 mb-3">Make <br> Remote Work</h1>
-        <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
         <br>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-          <button type="button" class="btn btn-primary btn-lg px-4 me-md-6">Learn More</button>
+        <p class="lead p-1" style="color: gray;">Get your team in sync, no matter your location. Streamline processes, create team rituals and watch productivity soar.</p>
+        <br>
+      
+        <div class="d-grid gap-2 p-2 d-md-flex justify-content-md-start">
+          <button type="button" class="btn btn-dark btn-lg px-lg-4 me-md-6">Learn More</button>
     
         </div>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <ul class="nav align-self-center col-12 col-md-auto mb-2 justify-content-start mb-md-0 p-2">
-          <li><img href="#" class="nav-link px-2 link-dark" src="images/client-databiz.svg"></img></li>
-          <li><img href="#" class="nav-link px-2 link-dark" src="images/client-audiophile.svg"></img></li>
-          <li><img href="#" class="nav-link px-2 link-dark" src="images/client-meet.svg"></img></li>
-          <li><img href="#" class="nav-link px-2 link-dark" src="images/client-maker.svg"></img></li>
-        </ul>
       </div>
-      </div>
+      <ul class="nav col-12 mt-auto p-0 text-end">
+        <li><img href="#" class="nav-link px-2 link-dark" src="images/client-databiz.svg"></img></li>
+        <li><img href="#" class="nav-link px-2 link-dark" src="images/client-audiophile.svg"></img></li>
+        <li><img href="#" class="nav-link px-2 link-dark" src="images/client-meet.svg"></img></li>
+        <li><img href="#" class="nav-link px-2 link-dark" src="images/client-maker.svg"></img></li>
+      </ul>
+    
     </div>
-  </div>
+   
+   
+    </div>
+ 
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
