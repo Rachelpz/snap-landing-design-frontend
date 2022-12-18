@@ -8,5 +8,5 @@
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Rachelpz/)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/Rachelpz/snap-landing-design-frontend](https://github.com/Rachelpz/snap-landing-design-frontend)
+- Live Site URL: [https://rachelpz.github.io/snap-landing-design-frontend/](https://rachelpz.github.io/snap-landing-design-frontend/)
