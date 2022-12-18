@@ -5,31 +5,114 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
-
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/headers/">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+
+   <link href="css/headers.css" rel="stylesheet">
 </head>
 <body>
+  
 
-  Features
-  Company
-  Careers
-  About
+  <div class="container">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-center py-3 mb-2 border-bottom">
+      <a href="/" class="align-self-center d-flex p-2 col-md-2 mb-2 mb-md-0 text-dark text-decoration-none">
+        <img class="bi me-2"  role="img" aria-label="logo" src="images/logo.svg"></img>
+      </a>
 
-  Login
-  Register
+      <ul class="nav align-self-center col-12 col-md-auto mb-2 justify-content-start mb-md-0 p-2">
+        <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">Company</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">Careers</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
+      </ul>
 
-  Make remote work
+      <div class="col-md-3 text-end justify-content-end ms-auto p-2">
+        <button type="button" class="btn text-secondary me-2">Login</button>
+        <button type="button" class="btn btn-outline-secondary">Sign-up</button>
+      </div>
+    </header>
+  </div>
 
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="images/image-hero-desktop.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 style="font-size: 4.5rem" class="display-5 fw-bold lh-1 mb-3">Make <br> Remote Work</h1>
+        <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+        <br>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-6">Learn More</button>
+    
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <ul class="nav align-self-center col-12 col-md-auto mb-2 justify-content-start mb-md-0 p-2">
+          <li><img href="#" class="nav-link px-2 link-dark" src="images/client-databiz.svg"></img></li>
+          <li><img href="#" class="nav-link px-2 link-dark" src="images/client-audiophile.svg"></img></li>
+          <li><img href="#" class="nav-link px-2 link-dark" src="images/client-meet.svg"></img></li>
+          <li><img href="#" class="nav-link px-2 link-dark" src="images/client-maker.svg"></img></li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </div>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
